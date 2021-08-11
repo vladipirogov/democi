@@ -15,7 +15,6 @@ pipeline {
         gitlab(triggerOnPush: true, branchFilterType: "NameBasedFilter",  includeBranchesSpec: "master", excludeBranchesSpec: "")
     }
 
-    }
     environment {
         IMAGE = 'demo/ci:1.0'
     }
