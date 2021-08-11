@@ -7,14 +7,6 @@ pipeline {
         jdk 'jdk-8'
     }
 
-    options {
-      gitlabCommitStatus(name: 'jenkins')
-    }
-
-    triggers {
-        gitlab(triggerOnPush: true, branchFilterType: "NameBasedFilter",  includeBranchesSpec: "master", excludeBranchesSpec: "")
-    }
-
     environment {
         IMAGE = 'demo/ci:1.0'
     }
@@ -53,6 +45,4 @@ pipeline {
             }
 
         }
-
-
 }
