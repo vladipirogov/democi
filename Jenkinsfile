@@ -30,7 +30,7 @@ pipeline {
 
             steps {
             	echo "Start deploy"
-            	sh "docker run -p 8083:8080 ${IMAGE}"
+            	sh "docker run -d -p 8083:8080 ${IMAGE}"
             }
         }
     }
